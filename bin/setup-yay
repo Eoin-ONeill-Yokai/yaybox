@@ -1,0 +1,9 @@
+#!/bin/sh
+YAYBOX_DIR=${HOME}/.config/yaybox
+mkdir -p ${YAYBOX_DIR}
+pushd ${YAYBOX_DIR}
+git clone https://aur.archlinux.org/yay-git.git
+pushd ${YAYBOX_DIR}/yay-git
+makepkg -si
+popd
+popd
